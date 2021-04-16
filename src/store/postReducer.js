@@ -1,10 +1,7 @@
 import { ADD_POST, SET_POSTS } from './types';
 
 const defaultState = {
-  posts: [
-    { id: 8787, title: 'blabla' },
-    { id: 876447, title: 'хо-хо-хо' },
-  ],
+  posts: [],
 
   asyncPosts: [],
 };
@@ -21,5 +18,3 @@ export const postReducer = (state = defaultState, action) => {
       return state;
   }
 };
-
-

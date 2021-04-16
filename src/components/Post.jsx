@@ -1,8 +1,8 @@
 
-const Post = (props) => {
+const Post = ({postInfo}) => {
    return (
       <li>
-         {props.post.title}
+         {postInfo.title}
       </li>
    )
 }

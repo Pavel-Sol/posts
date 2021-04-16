@@ -8,12 +8,14 @@ const SyncPosts = (props) => {
           <h2>sync posts</h2>
           <div className='list'>
              {
-                props.syncPosts.map(post => <Post post={post}/>)
+                props.syncPosts.map(post => <Post postInfo={post}/>)
              }
           </div>
         </div>
    )
   }
+
+  return <div>Постов пока нет</div>
    
 }
 

@@ -14,3 +14,12 @@
 .async-posts {
   width: 45%;
 }
+
+.loader__wrapper {
+  width: 70px;
+  height: 70px;
+}
+
+.loader__wrapper img {
+  width: 100%;
+}
