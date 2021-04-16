@@ -1,4 +1,7 @@
 const ADD_POST = 'ADD_POST';
+export const FETCH_POSTS = 'FETCH_POSTS';
+// export const REQEST_POSTS = 'REQEST__POSTS';
+const SET_POSTS = 'SET_POSTS';
 
 const defaultState = {
   posts: [
@@ -14,6 +17,9 @@ export const postReducer = (state = defaultState, action) => {
     case ADD_POST:
       return { ...state, posts: [...state.posts, action.payload] };
 
+    case SET_POSTS:
+      return { ...state, asyncPosts: action.payload };
+
     default:
       return state;
   }
@@ -25,3 +31,6 @@ export const addPostAC = (payload) => {
     payload,
   };
 };
+
+export const setUsers = (payload) => ({ type: SET_POSTS, payload });
+export const fetchUsers = () => ({ type: FETCH_POSTS });

@@ -5,6 +5,7 @@ import {addPostAC} from './../store/postReducer'
 
 
  const Form = (props) => {
+   //  console.log(props)
    const[inpText, setInpText] = useState('')
 
    const updateInputHandler = (event) => {
@@ -20,7 +21,10 @@ import {addPostAC} from './../store/postReducer'
          id: Date.now().toString()
       }
       
-      props.addPostAC(newPost)
+      if (newPost.title.trim()) {
+         props.addPostAC(newPost)
+      }
+     
 
       setInpText('')
    }

@@ -1,12 +1,33 @@
+import {fetchUsers} from './../store/postReducer'
+import {connect} from 'react-redux'
 
-
- const AsyncPosts = () => {
+ const AsyncPosts = (props) => {
+   console.log(props)
+  const posts = props.posts
    return (
       <div className="async-posts">
           <h2>async posts</h2>
-          <button>загрузить посты</button>
+          <button onClick={() => props.fetchUsers()}>загрузить посты</button>
+          {
+            posts.length > 0
+            ? posts.map(post => {
+                return <li>{post.title}</li>
+            })
+
+            :null
+          }
         </div>
    )
 }
 
-export default AsyncPosts
+const mapStateToProps = (state) => {
+  return{
+    posts : state.postReducer.asyncPosts
+  }
+}
+
+const mapDispatchToProps = {
+  fetchUsers
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AsyncPosts)
