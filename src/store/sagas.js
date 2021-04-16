@@ -1,5 +1,6 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import { FETCH_POSTS, setUsers } from './postReducer';
+import { FETCH_POSTS } from './types';
+import { setUsers } from './actions';
 
 export function* sagaWatcher() {
   yield takeEvery(FETCH_POSTS, sagaWorker);

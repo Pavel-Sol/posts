@@ -1,7 +1,4 @@
-const ADD_POST = 'ADD_POST';
-export const FETCH_POSTS = 'FETCH_POSTS';
-// export const REQEST_POSTS = 'REQEST__POSTS';
-const SET_POSTS = 'SET_POSTS';
+import { ADD_POST, SET_POSTS } from './types';
 
 const defaultState = {
   posts: [
@@ -25,12 +22,4 @@ export const postReducer = (state = defaultState, action) => {
   }
 };
 
-export const addPostAC = (payload) => {
-  return {
-    type: ADD_POST,
-    payload,
-  };
-};
 
-export const setUsers = (payload) => ({ type: SET_POSTS, payload });
-export const fetchUsers = () => ({ type: FETCH_POSTS });

@@ -2,7 +2,6 @@ import {connect} from 'react-redux'
 import Post from './Post'
 
 const SyncPosts = (props) => {
-   // console.log(props)
   if (props.syncPosts.length > 0) {
    return (
       <div className="sync-posts">

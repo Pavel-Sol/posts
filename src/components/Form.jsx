@@ -1,11 +1,10 @@
 import {useState} from 'react'
 import {connect} from 'react-redux'
-import {addPostAC} from './../store/postReducer'
+import {addPostAC} from './../store/actions'
 
 
 
  const Form = (props) => {
-   //  console.log(props)
    const[inpText, setInpText] = useState('')
 
    const updateInputHandler = (event) => {

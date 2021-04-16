@@ -1,4 +1,4 @@
-import {fetchUsers} from './../store/postReducer'
+import {fetchUsers} from './../store/actions'
 import {connect} from 'react-redux'
 
  const AsyncPosts = (props) => {
