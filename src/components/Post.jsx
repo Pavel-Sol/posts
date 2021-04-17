@@ -1,9 +1,9 @@
 
 const Post = ({postInfo}) => {
    return (
-      <li>
+      <div className='post__card'>
          {postInfo.title}
-      </li>
+      </div>
    )
 }
 

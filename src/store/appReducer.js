@@ -1,4 +1,4 @@
-import {SHOW_LOADER, HIDE_LOADER} from './types'
+import { SHOW_LOADER, HIDE_LOADER } from './types';
 
 const defaultState = {
   isLoading: false,
@@ -7,12 +7,12 @@ const defaultState = {
 export const appReducer = (state = defaultState, actions) => {
   switch (actions.type) {
     case SHOW_LOADER:
-      return {...state, isLoading: true}
+      return { ...state, isLoading: true };
 
-      case HIDE_LOADER:
-      return {...state, isLoading: false}
+    case HIDE_LOADER:
+      return { ...state, isLoading: false };
 
     default:
-      return state
+      return state;
   }
 };

@@ -5,11 +5,13 @@ import SyncPosts from './components/SyncPosts';
 
 function App() {
   return (
-    <div className="App">
-      <Form />
-      <div className="posts__wrapper">
-        <SyncPosts />
-        <AsyncPosts />
+    <div className="app">
+      <div className="container">
+        <Form />
+        <div className="posts__wrapper">
+          <SyncPosts />
+          <AsyncPosts />
+        </div>
       </div>
     </div>
   );

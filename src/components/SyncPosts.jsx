@@ -2,21 +2,17 @@ import {connect} from 'react-redux'
 import Post from './Post'
 
 const SyncPosts = (props) => {
-  if (props.syncPosts.length > 0) {
    return (
       <div className="sync-posts">
-          <h2>sync posts</h2>
-          <div className='list'>
-             {
-                props.syncPosts.map(post => <Post postInfo={post}/>)
-             }
-          </div>
-        </div>
-   )
-  }
-
-  return <div>Постов пока нет</div>
-   
+         <h2>синхронные посты</h2>
+         <div className='sync-posts__list'>
+            {  props.syncPosts.length > 0
+               ? props.syncPosts.map(post => <Post key={post.id + Date.now()} postInfo={post}/>)
+               : <div className='sync-posts__warn'>Постов пока нет</div>
+            }
+         </div>
+      </div>
+   )   
 }
 
 

@@ -1,6 +1,6 @@
 import { ADD_POST, FETCH_POSTS, SET_POSTS, SHOW_LOADER, HIDE_LOADER } from './types';
 
-export const addPostAC = (payload) => {
+export const addPost = (payload) => {
   return { type: ADD_POST, payload };
 };
 

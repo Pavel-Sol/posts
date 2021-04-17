@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {connect} from 'react-redux'
-import {addPostAC} from './../store/actions'
+import {addPost} from './../store/actions'
 
 
 
@@ -21,8 +21,8 @@ import {addPostAC} from './../store/actions'
       }
       
       if (newPost.title.trim()) {
-         props.addPostAC(newPost)
-      }
+         props.addPost(newPost)
+      } 
      
 
       setInpText('')
@@ -31,18 +31,21 @@ import {addPostAC} from './../store/actions'
    
 
    return (
-      <div className="form__wrapper">
-        <form onSubmit={(e) => submitHandler(e)} action="">
-           <input value={inpText} onChange={(e) => updateInputHandler(e)} type="text"/>
-           <button 
-           type='submit'>отправить</button>
+      <div className='form__wrapper'>
+        <form className='form' onSubmit={(e) => submitHandler(e)} action="">
+           <input className='input__title' value={inpText} onChange={(e) => updateInputHandler(e)} type="text"/>
+           <button
+           className='btn' 
+           type='submit'>добавить пост</button>
         </form>
       </div>
    )
 }
 
 const mapDispatchToProps = {
-   addPostAC    
+   addPost,
 }
+
+
 
 export default connect(null, mapDispatchToProps)(Form)

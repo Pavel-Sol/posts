@@ -1,25 +1,94 @@
-.App {
-  /* text-align: center; */
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.container {
   max-width: 1100px;
   margin: 0px auto;
+  padding: 50px 20px;
+}
+
+.form__wrapper {
+  max-width: 330px;
+  background-color: rgb(214, 221, 207);
+  padding: 15px;
+  border-radius: 5px;
+  margin: 0px auto 20px auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.input__title {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 2px solid rgb(214, 221, 207);
+}
+.input__title:focus {
+  border: 2px solid rgb(60, 60, 228);
+}
+
+.btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background-color: rgb(60, 60, 228);
+  color: #fff;
+  margin-top: 12px;
 }
 
 .posts__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0);
 }
 
 .sync-posts,
 .async-posts {
   width: 45%;
+  text-align: center;
+}
+
+.post__card {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  background-color: rgba(214, 221, 207, 0.2);
+  margin: 5px 0px;
+  text-align: justify;
+  padding: 5px;
+}
+
+.sync-posts__warn {
+  background-color: rgba(228, 210, 52, 0.5);
+  padding: 10px 0px;
+  margin-top: 12px;
 }
 
 .loader__wrapper {
   width: 70px;
   height: 70px;
+  margin: 10px auto;
 }
 
 .loader__wrapper img {
   width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .posts__wrapper {
+    flex-direction: column;
+  }
+
+  .sync-posts,
+  .async-posts {
+    width: 90%;
+    margin: 0px auto;
+  }
 }
