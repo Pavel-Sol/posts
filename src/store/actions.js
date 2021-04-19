@@ -5,6 +5,6 @@ export const addPost = (payload) => {
 };
 
 export const setPosts = (payload) => ({ type: SET_POSTS, payload });
-export const fetchUsers = () => ({ type: FETCH_POSTS });
+export const fetchPosts = () => ({ type: FETCH_POSTS });
 export const showLoader = () => ({ type: SHOW_LOADER });
 export const hideLoader = () => ({ type: HIDE_LOADER });

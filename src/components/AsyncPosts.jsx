@@ -1,4 +1,4 @@
-import {fetchUsers} from './../store/actions'
+import {fetchPosts} from './../store/actions'
 import {connect} from 'react-redux'
 
 import Post from './Post'
@@ -10,7 +10,7 @@ import Loader from './Loader'
    return (
       <div className="async-posts">
           <h2>асинхронные посты</h2>
-          <button className='btn' onClick={() => props.fetchUsers()}>загрузить посты</button>
+          <button className='btn' onClick={() => props.fetchPosts()}>загрузить посты</button>
           <div>
             {
               isLoading
@@ -37,7 +37,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  fetchUsers
+  fetchPosts
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AsyncPosts)
